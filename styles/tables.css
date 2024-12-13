@@ -1,0 +1,27 @@
+table {
+    margin: 1%;
+    inline-size: 100%;
+    font-family: 'Courier New', Courier, monospace;
+}
+caption {
+    font-size: 3.5vi;
+    color: var(--yellow);
+}
+th, td {
+    border: 0.1em solid var(--trim);
+    font-size: 3vi;
+    border-radius: 0.3em;
+    background: radial-gradient(var(--tertiaryDark), var(--secondaryDark));
+}
+th {
+    color: var(--yellow);
+}
+td {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+@media all and (min-width: 768px) {
+    table * {
+        font-size: 1.1em;
+    }
+}

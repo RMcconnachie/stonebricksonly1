@@ -1,0 +1,267 @@
+:root {
+    --mainDark: #363635;
+    --secondaryDark: #3d260c;
+    --tertiaryDark: #723d00;
+    --white: #ffffff;
+    --yellow: #ffdc68;
+    --trim: #ff7403;
+    --border: 0.3vi solid var(--trim);
+    --borderThick: 0.6vi solid var(--trim);
+    --glow: 0 0.5em 0.5em var(--tertiaryDark);
+}
+
+* {
+    background-color: var(--mainDark);
+    color: var(--white);
+}
+
+nav {
+    position: sticky;
+    z-index: 1;
+    inset-block-start: 0;
+    display: inline-block;
+    inline-size: calc(85vi - 1.5em);
+    margin-inline: calc(1.5em - 0.1vi);
+    margin-block-end: 0.25em;
+    border-block-end: var(--border);
+    border-inline: var(--border);
+    border-bottom-right-radius: 1em;
+    border-top-right-radius: 1em;
+    padding-inline-end: 1em;
+    box-shadow: var(--glow);
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        li {
+            display: inline-block;
+        }
+    }
+}
+footer nav {
+    position: static;
+    margin-block-start: 0.25em;
+    margin-block-end: 0;
+    border-block-start: var(--border);
+    border-block-end: none;
+    border-bottom-right-radius: 0;
+    box-shadow: 0 0 20px var(--tertiaryDark);
+}
+nav a {
+    padding: 0.25em;
+    color: #ffdc68;
+    display: inline-block;
+    font-size: calc(75vi / 30);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+p a {
+    color: #ffdc68;
+}
+#background {
+    position: absolute;
+    inset-block-start: 1.4vi;
+    z-index: 0;
+    background-image: url(../images/brick-wall.png);
+    margin-inline: 0.25em;
+    margin-block-start: 0.25em;
+    border: var(--border);
+    border-radius: 1.25em;
+    padding: 0.3em;
+    inline-size: 95%;
+    block-size: 50px;
+    display: none;
+    background-size: contain;
+    transform: skewY(1.5deg);
+    box-shadow: 0 0 20px var(--secondaryDark), 0 0 30px var(--tertiaryDark);
+}
+#banner {
+    position: static;
+    z-index: 2;
+    margin-inline: 0.25em;
+    margin-block-start: 0.25em;
+    border: var(--borderThick);
+    border-radius: 1.25em;
+    padding: 0.4em;
+    background-color: var(--secondaryDark);
+    box-shadow: 0 0 5px var(--tertiaryDark), 0 0 15px var(--tertiaryDark), 0 0 25px var(--tertiaryDark);
+    * {
+        background-color: var(--secondaryDark);
+    }
+    div {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-self: flex-end;
+        img {
+            inline-size: 10vi;
+            block-size: 10vi;
+            align-self: center;
+        }
+        h1 {
+            font-size: 5vi;
+            align-self: center;
+            color: var(--yellow);
+            font-family: sans-serif !important;
+            text-shadow: 0 0 0.5em var(--yellow);
+            s {
+                color: var(--yellow);
+            }
+        }
+        nav {
+            display: none;
+        }
+    }
+}
+main {
+    margin: 0.8em;
+    h1 {
+        color: var(--yellow);
+        font-size: 3vi;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    p {
+        margin: 1%;
+        font-size: 3vi;
+        text-align: justify;
+        overflow: auto;
+    }
+    strong {
+        color: var(--yellow);
+        font-size: 1.2em;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    strong > s {
+        color: var(--yellow);
+        font-size: 1em;
+    }
+    img {
+        inline-size: 15%;
+        padding: 0.4em;
+        &.floatedImg {
+            float: right;
+        }
+        &.palletImage {
+            float: left;
+            width: 2em;
+            height: 2em;
+        }
+    }
+}
+#attributionBar {
+    border-top: var(--border);
+    font-size: 2vi;
+    ul {
+        list-style-type: none;
+    }
+}
+@media all and (768px < width < 1300px) {
+    nav {
+        margin-inline: calc(0.25em + 16px);
+        margin-block-end: 0.25em;
+        inline-size: 40em;
+    }
+    footer nav {
+        margin-top: 0.25em;
+    }
+    nav a {
+        padding: 0.25em;
+        font-size: 3.2ex;
+        border: 1px solid var(--mainDark);
+    }
+    nav a:hover {
+        background: radial-gradient(var(--tertiaryDark), var(--mainDark));
+        border: 1px solid var(--tertiaryDark);
+    }
+    #background {
+        display: block;
+    }
+    #banner {
+        clip-path: polygon(0 0, 0 100%, 42.5em 100%, 43em calc(100% - 3em), 100% calc(100% - 3em), 100% 0);
+        div {
+            img {
+                inline-size: 8ex;
+                block-size: 8ex;
+            }
+            h1 {
+                font-size: 4ex;
+            }
+        }
+    }
+    main p {
+        font-size: 1.2em;
+        img {
+            inline-size: 5em;
+        }
+    }
+    main h1 {
+        font-size: 1.2em;
+        font-family: Verdana, serif;
+    }
+    #attributionBar {
+        font-size: 1em;
+    }
+}
+@media all and (min-width: 1300px) {
+    nav {
+        margin-inline: calc(0.25em + 16px);
+        margin-bottom: 0.25em;
+        inline-size: 40em;
+    }
+    footer nav {
+        margin-block-start: 0.25em;
+    }
+    nav a {
+        padding: 0.25em;
+        font-size: 3.2ex;
+        border: 1px solid var(--mainDark);
+    }
+    nav a:hover {
+        background: radial-gradient(var(--tertiaryDark), var(--mainDark));
+        border: 1px solid var(--tertiaryDark);
+    }
+    #background {
+        display: block;
+    }
+    #banner {
+        clip-path: polygon(0 0, 0 100%, 20em 100%, 20.5em calc(100% - 3em), calc(100% - 40em) calc(100% - 3em), calc(100% - 38em) calc(100% - 1.5em), 100% calc(100% - 1.5em), 100% 0);
+        div {
+            img {
+                inline-size: 8ex;
+                block-size: 8ex;
+            }
+            h1 {
+                font-size: 4ex;
+            }
+            nav {
+                display: flex;
+                border: none;
+                box-shadow: none;
+                ul {
+                    position: absolute;
+                    inset-inline-end: 0;
+                    align-self: center;
+                    a {
+                    border-color: var(--tertiaryDark);
+                    border-radius: 0.5em;
+                    }
+                    a:hover {
+                        background: radial-gradient(var(--tertiaryDark), var(--secondaryDark));
+                    }
+                }
+            }
+        }
+    }
+    main p {
+        font-size: 1.2em;
+        img {
+            inline-size: 5em;
+        }
+    }
+    main h1 {
+        color: var(--yellow);
+        font-size: 1.2em;
+    }
+    #attributionBar {
+        font-size: 1em;
+    }
+}

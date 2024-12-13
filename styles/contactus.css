@@ -1,0 +1,192 @@
+caption {
+    font-size: 3.5vi;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+form {
+    margin-inline: 1%;
+    padding-inline: 5%;
+    font-size: 3vi;
+    h1 {
+        text-align: center;
+        font-size: 3.5vi;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: var(--yellow);
+    }
+    label {
+        justify-self: end;
+        margin: 0.6em;
+    }
+    select {
+        font-size: 3vi;
+    }
+    fieldset#field {
+        display: grid;
+        grid-template-columns: 12vi 48vi;
+        inline-size: 100%;
+        border-color: var(--trim);
+        border-top-left-radius: 1em;
+        border-top-right-radius: 1em;
+        * {
+            margin-block: 0.2em;
+        }
+        fieldset#reason, fieldset#findOut {
+            grid-column: 1 / 2;
+            justify-self: start;
+            inline-size: 100%;
+            border-color: var(--yellow);
+            border-radius: 0.8em;
+            display: grid;
+            grid-template-columns: 1em 65vi;
+            position: relative;
+            inset-inline-end: 0.5em;
+            label {
+                justify-self: start;
+            }
+            input {
+                margin: 0;
+            }
+            textarea {
+                grid-column: 1 / 2;
+                inline-size: 60vi;
+            }
+            fieldset#brickDefinition {
+                grid-column: 1 / 2;
+                inline-size: 60vi;
+                border-radius: 0.8em;
+                display: grid;
+                grid-template-columns: 3.5em 1fr;
+                label:not([for="curved"]) {
+                    grid-column: 1;
+                    justify-self: end;
+                }
+                label [for="curved"] {
+                    grid-column: 2;
+                }
+                select {
+                    grid-column: 2;
+                }
+                input {
+                    grid-column: 2;
+                    margin-block: 0.4em;
+                    inline-size: 10%;
+                }
+                input#curved {
+                    grid-column: 1;
+                    margin-block: 0.4em;
+                    inline-size: 100%;
+                }
+            }
+        }
+    }
+    fieldset#submission {
+        display: flex;
+        inline-size: 100%;
+        justify-content: center;
+        border-color: var(--trim);
+        border-bottom-left-radius: 1em;
+        border-bottom-right-radius: 1em;
+    }
+    input {
+        border-radius: 0.8em;
+    }
+    input[type="submit"] {
+        background-color: green;
+        inline-size: 8em;
+    }
+    input[type="reset"] {
+        background-color: brown;
+        inline-size: 5em;
+    }
+}
+@media all and (min-width: 1100px) {
+    form fieldset#field fieldset#reason fieldset#brickDefinition {
+        grid-column: 1 / 2;
+        inline-size: 60vi;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        #typeLabel {
+            grid-column: 1;
+            grid-row: 1;
+        }
+        select#type {
+            grid-column: 2 / 11;
+            grid-row: 1;
+        }
+        #L {
+            grid-column: 1;
+        }
+        #length {
+            grid-column: 2;
+        }
+        #W {
+            grid-column: 3;
+        }
+        #width {
+            grid-column: 4;
+        }
+        #H {
+            grid-column: 5;
+        }
+        #height {
+            grid-column: 6;
+        }
+        #Q {
+            grid-column: 7;
+        }
+        #quantity {
+            grid-column: 8;
+        }
+        input {
+            grid-row: 2;
+            margin-block: 0.4em;
+            inline-size: fit-content;
+        }
+        input#curved {
+            grid-column: 9;
+            margin-block: 0.4em;
+            margin-inline-start: 0.4em;
+            inline-size: 100%;
+        }
+        label [for="curved"] {
+            grid-column: 10;
+        }
+    }
+}
+@media all and (min-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: 4fr 5fr;
+    }
+    #hours {
+        grid-column: 1;
+        table {
+            block-size: 40%;
+        }
+    }
+    form {
+        grid-column: 2;
+        font-size: 1em;
+        h1 {
+            font-size: 1.1em;
+        }
+        select {
+            font-size: 1em;
+        }
+        * {
+            padding-block-end: 0.5em;
+        }
+        fieldset#field {
+            grid-template-columns: 12vi 30vi;
+            fieldset#reason, fieldset#findOut {
+                grid-template-columns: 1.5em 40vi;
+                textarea {
+                    grid-column: 1 / 2;
+                    inline-size: 35vi;
+                }
+                fieldset#brickDefinition {
+                    inline-size: 35vi;
+                }
+            }
+        }
+    }
+}

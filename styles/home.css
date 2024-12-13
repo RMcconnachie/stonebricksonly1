@@ -1,0 +1,14 @@
+@media all and (min-width: 1100px) {
+    main {
+        display: grid;
+        grid-template-columns: 4fr 3fr;
+    }
+    p:nth-child(1) {
+        padding-inline-end: 0.4em;
+        border-inline-end: 0.1em solid var(--tertiaryDark);
+    }
+    p:nth-child(2) {
+        padding-inline-start: 0.4em;
+        border-inline-start: 0.1em solid var(--tertiaryDark);
+    }
+}

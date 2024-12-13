@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Stone Bricks Only</title>
+        <link rel="stylesheet" href="./styles/site.css">
+        <link rel="stylesheet" href="./styles/contactus.css">
+        <link rel="stylesheet" href="./styles/tables.css">
+        <link rel="icon" href="./images/object.png">
+    </head>
+    <body>
+        <div id="background"></div>
+        <header id="banner">
+            <div>
+                <div>
+                    <img src="./images/object.png" alt="Stone Brick">
+                    <h1>Stone Bricks <s>Only</s></h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./aboutus.html">About Us</a></li>
+                        <li><a href="./products.html">Products</a></li>
+                        <li><a href="./contactus.html">Contact Us</a></li>
+                        <li><a href="./learnmore.html">Learn More</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <nav>
+            <a href="./index.html">Home</a>
+            <a href="./aboutus.html">About Us</a>
+            <a href="./products.html">Products</a>
+            <a href="./contactus.html">Contact Us</a>
+            <a href="./learnmore.html">Learn More</a>
+        </nav>
+        <main>
+            <div id="hours">
+                <table>
+                    <caption>Opening Hours</caption>
+                    <tr><th>Monday</th><td>All day</td></tr>
+                    <tr><th>Tuesday</th><td>All day</td></tr>
+                    <tr><th>Wednesday</th><td>All day</td></tr>
+                    <tr><th>Thursday</th><td>All day</td></tr>
+                    <tr><th>Friday</th><td>All day</td></tr>
+                    <tr><th>Saturday</th><td>9:00-17:00</td></tr>
+                    <tr><th>Sunday</th><td>9:00-17:00</td></tr>
+                </table>
+                <table>
+                    <caption>Exceptions</caption>
+                    <tr><th>Holidays</th><td>Closed</td></tr>
+                    <tr><th>Oversize <br>Brick Orders</th><td>9:00-16:00</td></tr>
+                    <tr><th>Pickup, Small <br> Orders</th><td>7:00-18:00</td></tr>
+                    <tr><th>Pickup, Large <br>Orders (greater <br>than $15,000.00)</th><td>All day</td></tr>
+                </table>
+            </div>
+            <form>
+                <h1>Contact Us</h1>
+                <fieldset id="field">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" maxlength="50" size="30" name="firstName" id="firstName" placeholder="Bricky">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" maxlength="50" size="30" name="lastName" id="lastName" placeholder="McBrickFace">
+                    <label for="email">Email:</label>
+                    <input type="email" maxlength="100" size="30"  name="email" id="email" placeholder="bricky-mcbrickface@blocks.com">
+                    <label for="phone">Phone:</label>
+                    <input type="text" maxlength="50" size="30" name="phone" id="phone" placeholder="(819) 999-9998">
+                    <fieldset id="reason">
+                        <legend>Inquiry Reason</legend>
+                        <input type="checkbox" name="orderOver" id="orderOver">
+                        <label for="orderOver">Order Oversized Bricks</label>
+                        <input type="checkbox" name="pre-order" id="pre-order">
+                        <label for="pre-order">Pre-Order Other</label>
+                        <input type="checkbox" name="review" id="review">
+                        <label for="review">Review Us</label>
+                        <input type="checkbox" name="report" id="report">
+                        <label for="report">Report a problem</label>
+                        <input type="checkbox" name="other" id="other">
+                        <label for="other">Other</label>
+                        <fieldset id="brickDefinition">
+                            <legend>Define brick orders</legend>
+                            <label for="type" id="typeLabel">Brick Type:</label>
+                            <select name="type" id="type">
+                                <option value="cuboid" selected>Cuboid</option>
+                                <option value="cuboidWithHole">Cuboid With Hole</option>
+                                <option value="slab">Slab</option>
+                                <option value="tile">Tile (2D)</option>
+                                <option value="paver">Walkway Paver (2D)</option>
+                                <option value="slabsp">Slab Spacer (2D)</option>
+                                <option value="panel">Internal Panel (2D)</option>
+                                <option value="wedge">Wedge</option>
+                                <option value="outwedge">Outer Corner Wedge</option>
+                                <option value="inwedge">Inner Corner Wedge</option>
+                                <option value="pillar">Pillar (1D)</option>
+                                <option value="pipe">Pipe (1D)</option>
+                                <option value="window">Window (2D)</option>
+                                <option value="door">Door (2D)</option>
+                                <option value="gldoor">Glass door (2D)</option>
+                            </select>
+                            <label for="length" id="L">L:</label>
+                            <input type="text" maxlength="2" size="1" name="length" id="length">
+                            <label for="width" id="W">W:</label>
+                            <input type="text" maxlength="2" size="1" name="width" id="width">
+                            <label for="height" id="H">H:</label>
+                            <input type="text" maxlength="2" size="1" name="height" id="height">
+                            <label for="quantity" id="Q">Qty:</label>
+                            <input type="text" maxlength="4" size="1" name="quantity" id="quantity">
+                            <input type="checkbox" name="curved" id="curved">
+                            <label for="curved">Curved</label>
+                        </fieldset>
+                        <textarea rows="2" cols="50" maxlength="1000" name="description" id="description" placeholder="Please write your inquiry description here."></textarea>
+                        <textarea rows="2" cols="50" maxlength="1000" name="additional" id="additional" placeholder="Any additional questions?"></textarea>
+                    </fieldset>
+                    <fieldset id="findOut">
+                        <legend>How did you find out about us?</legend>
+                        <input type="radio" name="how" id="how1">
+                        <label for="how1">N/A</label>
+                        <input type="radio" name="how" id="how2">
+                        <label for="how2">Internet, Search Engine</label>
+                        <input type="radio" name="how" id="how3">
+                        <label for="how3">Internet, Link from another site</label>
+                        <input type="radio" name="how" id="how4">
+                        <label for="how4">Friend</label>
+                        <input type="radio" name="how" id="how5">
+                        <label for="how5">Advertising</label>
+                        <input type="radio" name="how" id="how6">
+                        <label for="how6">Other</label>
+                        <textarea rows="2" cols="50" maxlength="1000" name="description1" id="description1" placeholder="Please specify source."></textarea>
+                    </fieldset>
+                </fieldset>
+                <fieldset id="submission">
+                    <input type="submit" value="Send Inquiry">
+                    <input type="reset" value="Cancel">
+                </fieldset>
+            </form>
+        </main>
+        <footer>
+            <div>
+                <nav>
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./aboutus.html">About Us</a></li>
+                        <li><a href="./products.html">Products</a></li>
+                        <li><a href="./contactus.html">Contact Us</a></li>
+                        <li><a href="./learnmore.html">Learn More</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="attributionBar">
+                <ul>
+                    <li>
+                        <a href="https://www.flaticon.com/free-icons/concrete" title="concrete icons">Concrete icons created by Ylivdesign - Flaticon</a>
+                    </li>
+                    <li>
+                        <a href="https://www.flaticon.com/free-icons/brick-wall" title="brick-wall icons">Brick-wall icons created by Ehtisham Abid - Flaticon</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>
